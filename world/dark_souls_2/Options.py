@@ -84,6 +84,10 @@ class KeepInfiniteLifegems(Toggle):
     """Keep Melentia's infinite supply of lifegems"""
     display_name = "Keep Infinite Lifegems"
 
+class KeepVanillaAmmo(Toggle):
+    """Keep arrows, bolts, and greatarrows sold by shopkeepers"""
+    display_name = "Vanilla Ammo Vendors"
+
 class DS2ExcludeLocations(ExcludeLocations):
     """Prevent these locations from having an important item."""
     default = frozenset({"Dark Chasm of Old"})
@@ -106,6 +110,7 @@ class DS2Options(PerGameCommonOptions):
     enable_ngp: EnableNGPOption
     early_blacksmith: EarlyBlacksmith
     infinite_lifegems: KeepInfiniteLifegems
+    vanilla_ammo: KeepVanillaAmmo
     exclude_locations: DS2ExcludeLocations
     start_inventory: DS2StartInventory
     old_iron_king_dlc: OldIronKingDLC

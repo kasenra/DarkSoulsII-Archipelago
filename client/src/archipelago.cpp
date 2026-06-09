@@ -123,6 +123,19 @@ void setup_apclient(std::string URI, std::string slot_name, std::string password
 			locations_to_ignore.insert(75400601);
 		}
 
+		// Vanilla Ammo Progression, skips all shop ammo locations
+		if (data.contains("vanilla_ammo") && data.at("vanilla_ammo") == 1)
+		{
+			locations_to_ignore.insert({76400600, 76400601, 76400602, 76400603, // Lenigrast: Wood and Iron arrows and bolts
+										76430600, 76430601, 76430602, 76430603, 76430604, // McDuff: Wood and Iron arrows and bolts, Plus Iron Great
+										77600601, 77600602, // Ornifex: Fire arrows and bolts 
+										72600603, 72600607, // Gavlan: 2(?) poison arrow slots
+										72110604, 72110605, 72110606, 72110607, // Wellager: Magic and Lightning arrows and bolts
+										50600602, 50600603, // Agdayne: Dark Arrows and Bollts
+										77100602, 77100603, 77100604, // Navlaan: Lightning, Fire, and Destructive greatarrows
+										30700602 }); // Vengarl: Destructive greatarrows
+		}
+
 		if (data.contains("randomize_starting_loadout") && data.at("randomize_starting_loadout") == 1) {
 			if (data.contains("starting_weapon_requirement")) {
 				ClassRandomizationFlag flag = static_cast<ClassRandomizationFlag>(data.at("starting_weapon_requirement"));

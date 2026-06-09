@@ -547,4 +547,4 @@ class DS2World(World):
         if self.options.combat_logic == "disabled": return
 
     def fill_slot_data(self) -> dict:
-        return self.options.as_dict("death_link","game_version","no_weapon_req","no_spell_req","no_equip_load","infinite_lifegems","randomize_starting_loadout", "starting_weapon_requirement", "autoequip")
+        return self.options.as_dict("death_link","game_version","no_weapon_req","no_spell_req","no_equip_load","infinite_lifegems", "vanilla_ammo","randomize_starting_loadout", "starting_weapon_requirement", "autoequip")
