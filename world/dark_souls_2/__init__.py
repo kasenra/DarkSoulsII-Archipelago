@@ -60,6 +60,13 @@ class DS2World(World):
             self.multiworld.early_items[self.player]["Lenigrast's Key"] = 1
         elif self.options.early_blacksmith == "early_local":
             self.multiworld.local_early_items[self.player]["Lenigrast's Key"] = 1
+        elif self.options.early_blacksmith == "early_global_with_ember":
+            self.multiworld.early_items[self.player]["Lenigrast's Key"] = 1
+            self.multiworld.early_items[self.player]["Dull Ember"] = 1
+        elif self.options.early_blacksmith == "early_local_with_ember":
+            self.multiworld.local_early_items[self.player]["Lenigrast's Key"] = 1
+            self.multiworld.local_early_items[self.player]["Dull Ember"] = 1
+
 
     def create_regions(self):
 
