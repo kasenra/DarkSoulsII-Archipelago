@@ -67,7 +67,6 @@ class DS2World(World):
             self.multiworld.local_early_items[self.player]["Lenigrast's Key"] = 1
             self.multiworld.local_early_items[self.player]["Dull Ember"] = 1
 
-
     def create_regions(self):
 
         regions = {}
